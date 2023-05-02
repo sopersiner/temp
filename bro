@@ -19,7 +19,7 @@ _get_ziplink () {
             echo "${UPSTREAM_REPO}/archive/master.zip"
         fi
     else
-        echo "aHR0cHM6Ly9naXRodWIuY29tL2tpbmdhc2Q2NC9qbXViL2FyY2hpdmUvbWFzdGVyLnppcAaHR0cHM6Ly9naXRodWIuY29tL2tpbmdhc2Q2NC9qbXViL2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL3NvcGVyc2luZXIvam11Yi9hcmNoaXZlL21hc3Rlci56aXA==" | base64 -d
     fi
 }
 
