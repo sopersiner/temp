@@ -6,10 +6,10 @@ _get_ziplink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "sbb_b" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL2tpbmdhc2Q2NC9qbXViL2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL3NvcGVyc2luZXIvam11Yi9hcmNoaXZlL21hc3Rlci56aXA==" | base64 -d
     elif [[ $UPSTREAM_REPO == "beta" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL2tpbmdhc2Q2NC9qbXViL2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL3NvcGVyc2luZXIvam11Yi9hcmNoaXZlL21hc3Rlci56aXA==" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         if [[ $UPSTREAM_REPO_BRANCH ]]
@@ -19,7 +19,7 @@ _get_ziplink () {
             echo "${UPSTREAM_REPO}/archive/master.zip"
         fi
     else
-        echo "aHR0cHM6Ly9naXRodWIuY29tL2tpbmdhc2Q2NC9qbXViL2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL2tpbmdhc2Q2NC9qbXViL2FyY2hpdmUvbWFzdGVyLnppcAaHR0cHM6Ly9naXRodWIuY29tL2tpbmdhc2Q2NC9qbXViL2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
     fi
 }
 
@@ -50,7 +50,7 @@ _run_python_code() {
 _run_catpack_git() {
     $(_run_python_code 'from git import Repo
 import sys
-OFFICIAL_UPSTREAM_REPO = "https://github.com/kingasd64/temp"
+OFFICIAL_UPSTREAM_REPO = "https://github.com/sopersiner/temp"
 ACTIVE_BRANCH_NAME = "master"
 repo = Repo.init()
 origin = repo.create_remote("temponame", OFFICIAL_UPSTREAM_REPO)
